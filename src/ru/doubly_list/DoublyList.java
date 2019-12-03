@@ -1,6 +1,9 @@
 package ru.doubly_list;
 
+import java.util.Collection;
+import java.util.Iterator;
 import java.util.List;
+import java.util.ListIterator;
 
 class Node<E>{
     Node previous;
@@ -14,7 +17,7 @@ class Node<E>{
     }
 }
 
-public class DoublyList<E> {
+public class DoublyList<E> implements List{
     public Node headNode = new Node();
     public Node tailNode = new Node();
 
@@ -55,7 +58,22 @@ public class DoublyList<E> {
         return res;
     }
 
-    public boolean add(Object o){
+    @Override
+    public Iterator iterator() throws UnsupportedOperationException{
+        throw new UnsupportedOperationException();
+    }
+
+    @Override
+    public Object[] toArray() throws  UnsupportedOperationException{
+        throw new UnsupportedOperationException();
+    }
+
+    @Override
+    public Object[] toArray(Object[] a) throws UnsupportedOperationException{
+        throw new UnsupportedOperationException();
+    }
+
+    public boolean add(Object o) throws NullPointerException, IllegalArgumentException{
         boolean res = true;
         try {
             if (headNode.element != null) {
@@ -76,7 +94,42 @@ public class DoublyList<E> {
         }
     }
 
-    public Node getNode(int index) {
+    @Override
+    public boolean remove(Object o) throws UnsupportedOperationException{
+        throw new UnsupportedOperationException();
+    }
+
+    @Override
+    public boolean addAll(Collection c) throws  UnsupportedOperationException{
+        throw new UnsupportedOperationException();
+    }
+
+    @Override
+    public boolean addAll(int index, Collection c) throws UnsupportedOperationException{
+        throw new UnsupportedOperationException();
+    }
+
+    @Override
+    public void clear() throws UnsupportedOperationException{
+        throw new UnsupportedOperationException();
+    }
+
+    @Override
+    public boolean retainAll(Collection c) throws UnsupportedOperationException{
+        throw new UnsupportedOperationException();
+    }
+
+    @Override
+    public boolean removeAll(Collection c) throws UnsupportedOperationException{
+        throw new UnsupportedOperationException();
+    }
+
+    @Override
+    public boolean containsAll(Collection c) throws UnsupportedOperationException{
+        throw new UnsupportedOperationException();
+    }
+
+    private Node getNode(int index) {
         int counter = 0;
         Node n = headNode;
         while (n.element != null) {
@@ -138,6 +191,31 @@ public class DoublyList<E> {
             }
         }
         return tmp.element;
+    }
+
+    @Override
+    public int indexOf(Object o) throws UnsupportedOperationException{
+        throw new UnsupportedOperationException();
+    }
+
+    @Override
+    public int lastIndexOf(Object o) throws UnsupportedOperationException{
+        throw new UnsupportedOperationException();
+    }
+
+    @Override
+    public ListIterator listIterator() throws UnsupportedOperationException{
+        throw new UnsupportedOperationException();
+    }
+
+    @Override
+    public ListIterator listIterator(int index) throws UnsupportedOperationException{
+        throw new UnsupportedOperationException();
+    }
+
+    @Override
+    public List subList(int fromIndex, int toIndex) throws UnsupportedOperationException{
+        throw new UnsupportedOperationException();
     }
 
     public void printList(){
