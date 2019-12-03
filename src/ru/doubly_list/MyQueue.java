@@ -18,14 +18,14 @@ public class MyQueue<E> extends DoublyList{
 
     public Object element() throws NoSuchElementException{
         try{
-            return headNode.element;
+            return get(0);
         } catch (NoSuchElementException err) {
             throw new NoSuchElementException();
         }
     }
 
     public Object peek() {
-        return headNode.element;
+        return get(0);
     }
 }
 

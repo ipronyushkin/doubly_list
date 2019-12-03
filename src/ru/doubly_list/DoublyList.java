@@ -18,8 +18,8 @@ class Node<E>{
 }
 
 public class DoublyList<E> implements List{
-    public Node headNode = new Node();
-    public Node tailNode = new Node();
+    private Node headNode = new Node();
+    private Node tailNode = new Node();
 
     DoublyList(){
         headNode.next = tailNode;
